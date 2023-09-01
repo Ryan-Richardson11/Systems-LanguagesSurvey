@@ -1,3 +1,7 @@
+// Code is written in Java.
+// Java Development Kit was used with the javac compiler.
+// Program was tested and executed in Visual Studio Code.
+
 import java.util.Scanner;
 
 public class Project1 {
