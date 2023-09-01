@@ -1,15 +1,14 @@
 import java.util.Scanner;
 
-public class Main {
+public class Project1 {
 
     public static void fact() {
         System.out.println("Enter a Positive Integer:");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        System.out.println("It's developer tea time!");
-        while (n > 0) {
+        while (n < 0) {
             System.out.println("Sorry, only postivie numbers, enter again: ");
-            n = scanner.nextint();
+            n = scanner.nextInt();
         }
         if (n == 0) {
             System.out.println("The factorial of 0 is 1");
