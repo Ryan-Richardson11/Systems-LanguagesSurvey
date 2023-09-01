@@ -16,7 +16,7 @@ public class Project1 {
             int f = 1;
             for (int i = 1; i <= n; i++)
                 f *= i;
-            System.out.println("The factorial of" + n + "is" + f);
+            System.out.println("The factorial of " + n + " is " + f);
         }
     }
 
