@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Project1 {
-
+    // Java program to find the factorial of a number provided by the user.
     public static void fact() {
         System.out.println("Enter a Positive Integer:");
         Scanner scanner = new Scanner(System.in);
@@ -20,6 +20,7 @@ public class Project1 {
         }
     }
 
+    // main() function calls the fact() function.
     public static void main(String[] args) {
         fact();
     }
