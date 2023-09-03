@@ -1,3 +1,4 @@
+# Computes factorial of given input. Used for java basis
 def fact():
     n = int(input("Enter a positive Integer: "))
     while ((n < 0)):
