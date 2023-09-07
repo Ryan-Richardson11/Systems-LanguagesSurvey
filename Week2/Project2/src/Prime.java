@@ -1,8 +1,8 @@
-import java.util.scanner;
+import java.util.Scanner;
 
 public class Prime {
 
-    boolean isPrime(int n) {
+    public static boolean isPrime(int n) {
         if (n <= 1) {return false;}
         if (n <= 3) {return true;}
         if (n % 2 == 0 || n % 3 == 0) {return false;}
@@ -12,7 +12,21 @@ public class Prime {
         return true;
     }
 
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number;
+        while (true){
+            System.out.println("Enter a positve number (0 or negative to exit)");
+            number = input.nextInt();
+            if (number <= 0) {
+                break;
+            }
+            if (isPrime(number)) {
+                System.out.println(number + " is a prime number.");
+            } else {
+                System.out.println(number + " is not a prime number");
+            }
+        }
+        input.close();
     }
 }
