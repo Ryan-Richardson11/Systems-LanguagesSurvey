@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Prime {
 
+    // This code take an integer as and intput parameter and returns whether or not it is a prime number.
     public static boolean isPrime(int n) {
         if (n <= 1) {return false;}
         if (n <= 3) {return true;}
