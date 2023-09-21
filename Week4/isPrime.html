@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Input and Output Example</title>
-  <script>
-    function displayPrompt() {
-        var name = document.getElementById("inputName").value;
-        var age  = document.getElementById("inputAge").value;
-        if (name != "") {
-            document.getElementById("outputName").innerHTML = "Hello, " + name;
-            document.getElementById("outputName").style.color = "red";
-            if (age < 30) { document.getElementById("outputAge").innerHTML = "You are very young!"; }
-            else          { document.getElementById("outputAge").innerHTML = "You are not too old to learn!"; }
-            document.getElementById("outputAge").style.color = "blue"; }
-        else { document.getElementById("outputName").innerHTML = "... still waiting ..."; }
-    }
-</script>
+    <title>Prime Checker</title>
+    <script>
+        function isPrime(n) {
+            if (n <= 1) return false;
+            if (n <= 3) return true;
+            if (n % 2 === 0 || n % 3 === 0) return false;
+            for (let i = 5; i * i <= n; i += 6) {
+                if (n % i === 0 || n % (i + 2) === 0) return false;
+            }
+            return true;
+        }
+
+        function displayPrime() {
+            var n = document.getElementById("nbr").value;
+            if (n <= 0) {
+                document.getElementById("outputAnswer").innerHTML = "Enter a number greater than 0";
+                document.getElementById("outputAnswer").style.color = "blue";
+            }
+            if (isPrime(n)) {
+                document.getElementById("outputAnswer").innerHTML = "The number is prime!";
+                document.getElementById("outputAnswer").style.color = "red";
+            }
+            else {
+                document.getElementById("outputAnswer").innerHTML = "The number is not prime!";
+                document.getElementById("outputAnswer").style.color = "blue";
+            }
+        }
+
+    </script>
 </head>
+
 <body>
-    <h1 style="color:red">Getting to know you</h1>
-        <label>Enter Your Name:</label>
-        <input type="text" id="inputName"> <br>
-        <label>Enter Your Age:</label>
-        <input type="number" id="inputAge"> <br> <br>
-        <button onclick="displayPrompt()">Submit</button>
-    <p id="outputName">I'm waiting...</p>
+    <h1 style="color:red">Prime Checker</h1>
+    <label>Enter a number from 2 to 9999:</label>
+    <input type="number" id="nbr"> <br>
+    <button onclick="isPrime()">Submit</button>
+    <p id="outputAnswer">I'm waiting...</p>
     <p id="outputAge"></p>
+
 </body>
+
 </html>
