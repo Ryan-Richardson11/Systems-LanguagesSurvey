@@ -4,6 +4,7 @@
 <head>
     <title>Prime Checker</title>
     <script>
+        // Takes an input (n) and returns true if prime, else false.
         function isPrime(n) {
             if (n <= 1) return false;
             if (n <= 3) return true;
@@ -13,7 +14,7 @@
             }
             return true;
         }
-
+        // Displays the output based on the isPrime() function call.
         function displayPrime() {
             var n = document.getElementById("nbr").value;
             if (n <= 0) {
