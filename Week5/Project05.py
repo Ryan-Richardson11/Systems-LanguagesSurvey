@@ -13,9 +13,10 @@ def generateNumbers():
 #     os.mkdir(folder)
 
 def createFolder(folder):
-    if not os.listdir(folder):
-        for file in folder:
+    if os.listdir(folder):
+        for file in os.listdir(folder):
             os.remove(file)
+        os.rmdir(folder)
     os.mkdir(folder)
 
 def createFile(numbers,folder, file):
