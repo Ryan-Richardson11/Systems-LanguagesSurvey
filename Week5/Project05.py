@@ -19,20 +19,20 @@ def createFolder(folder):
     
     os.mkdir(folder)
 
-# Creates new file with the inputed path and writes the numbers in generateNumbers()
+# Creates new file with the inputed path and writes the numbers from generateNumbers().
 def createFile(numbers, folder, file):
     with open(os.path.join(folder, file), "w") as newFile:
         newFile.write(numbers)
 
-# Asks for user inputs to pass as parameters along with generated numbers then creates the folder and file.
+# Asks for user folder input to pass as parameters along with generated numbers then creates the folder and file.
 def main():
     try:
         folder = input("Enter the folder name: ")
-        file = input("Enter the file name: ")
     except:
-        print("Please input a valid path and file name")
+        print("Please input a valid path and folder name.")
     createFolder(folder)
     numbers = generateNumbers()
+    file = "numbers100.txt"
     createFile(numbers, folder, file)
 
 main()
