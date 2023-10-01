@@ -26,13 +26,13 @@ def createFile(numbers, folder, file):
 
 # Asks for user inputs to pass as parameters along with generated numbers then creates the folder and file.
 def main():
-    folder = input("Enter the folder name: ")
+    try:
+        folder = input("Enter the folder name: ")
+        file = input("Enter the file name: ")
+    except:
+        print("Please input a valid path and file name")
     createFolder(folder)
-    file = input("Enter the file name: ")
     numbers = generateNumbers()
     createFile(numbers, folder, file)
 
 main()
-
-# C:\Users\Ryan\OneDrive\Desktop\SystemsLanguages\Week5\test
-# test.txt
