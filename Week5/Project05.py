@@ -8,11 +8,12 @@ def generateNumbers():
     return "\n".join(randNums)
 
 def createFolder(folder):
-    if os.listdir(folder):
+    if os.path.exists(folder):
         for file in os.listdir(folder):
             filePath = os.path.join(folder, file)
             os.remove(filePath)
         os.rmdir(folder)
+    
     os.mkdir(folder)
 
 def createFile(numbers,folder, file):
@@ -20,7 +21,7 @@ def createFile(numbers,folder, file):
         newFile.write(numbers)
     newFile.close()
 
-# C:\Users\Ryan\Desktop\System+Languages\Week5\Test
+# C:\Users\Ryan\Desktop\SystemLanguages\Week5\Test
 # Test.txt
 def main():
     folder = input("Enter the folder name: ")
