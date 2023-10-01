@@ -7,15 +7,11 @@ def generateNumbers():
         randNums.append(str(random.randint(0, 1000)))
     return "\n".join(randNums)
 
-# def createFolder(folder):
-#     if os.path.exists(folder):
-#         os.rmdir(folder)
-#     os.mkdir(folder)
-
 def createFolder(folder):
     if os.listdir(folder):
         for file in os.listdir(folder):
-            os.remove(file)
+            filePath = os.path.join(folder, file)
+            os.remove(filePath)
         os.rmdir(folder)
     os.mkdir(folder)
 
