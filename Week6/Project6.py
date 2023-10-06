@@ -19,10 +19,13 @@ def main():
     mypath = str(input("Enter a the path to your file: "))
     path = checkPath(OS, mypath)
 
-    if os.path.exists():
-        print(os.path.basename(path))
-    else:
-        print("The path is not recognized.")
+    # if os.path.exists(path):
+    #     print(os.path.basename(path))
+    # else:
+    #     print("The path is not recognized.")
+    print(path)
+    print(os.path.basename(path))
 
 main()
 
+# C:\\Users\\Ryan\\OneDrive\\Desktop\\AdvancedAlgorithms\\Week1\\Project1.py
