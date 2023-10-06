@@ -16,15 +16,13 @@ def checkPath(OS, path):
 
 def main():
     OS = findOS()
-    mypath = str(input("Enter a the path to your file: "))
+    mypath = input("Enter a the path to your file: ")
     path = checkPath(OS, mypath)
 
-    # if os.path.exists(path):
-    #     print(os.path.basename(path))
-    # else:
-    #     print("The path is not recognized.")
-    print(path)
-    print(os.path.basename(path))
+    if os.path.exists(path):
+        print(os.path.basename(path))
+    else:
+        print("The path is not recognized.")
 
 main()
 
