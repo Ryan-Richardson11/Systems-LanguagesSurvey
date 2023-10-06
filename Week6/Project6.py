@@ -6,20 +6,20 @@ def findOS():
 def checkPath(OS, path):
     if OS == "Windows":
         if '/' in path:
-            path.replace("/", "\\")
+            path = path.replace("/", "\\")
         return path
     elif OS == "Darwin":
         if "\\" in path:
-            path.replace("\\", "/")
+            path = path.replace("\\", "/")
         return path
     return path
 
 def main():
     OS = findOS()
-    path = str(input("Enter a the path to your file: "))
-    checkPath(OS, path)
+    mypath = str(input("Enter a the path to your file: "))
+    path = checkPath(OS, mypath)
 
-    if os.path.exists(path):
+    if os.path.exists():
         print(os.path.basename(path))
     else:
         print("The path is not recognized.")
