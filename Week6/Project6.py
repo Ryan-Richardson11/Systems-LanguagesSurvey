@@ -2,7 +2,7 @@ import platform, os
 # Function returns the current systems platform
 def findOS():
     return platform.system()
-#Checks the path using the findOS function and an inputed path.
+# Checks the path using the findOS function and an inputed path.
 # Switches the format to match the OS running. 
 def checkPath(OS, path):
     if OS == "Windows":
@@ -16,6 +16,7 @@ def checkPath(OS, path):
     return path
 
 def main():
+    # Asks for user inputed path.
     OS = findOS()
     mypath = input("Enter a the path to your file: ")
     path = checkPath(OS, mypath)
